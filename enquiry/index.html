@@ -170,7 +170,11 @@ body.sent .done{display:block}
   }
   if(/[?&]sent=1/.test(location.search)){
     document.body.classList.add('sent');
-    if(typeof gtag==='function') gtag('event','enquiry_submitted');
+    if(typeof gtag==='function'){
+      gtag('event','enquiry_submitted');
+      /* Event snippet for Submit lead form conversion page */
+      gtag('event','conversion',{'send_to':'AW-1015216036/I0pRCPOY3-scEKTvi-QD'});
+    }
   }
   var form=document.getElementById('enq'),btn=document.getElementById('sendbtn');
   if(form&&btn){form.addEventListener('submit',function(){btn.disabled=true;});}
