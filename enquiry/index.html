@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#25190F">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1015216036"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-1015216036');
+</script>
+<title>पूछताछ फ़ॉर्म — नलखेड़ा ज़मीन</title>
+<meta name="description" content="नलखेड़ा (आगर मालवा) की 4.47 एकड़ ज़मीन के बारे में पूछताछ करें। अपना नाम, ईमेल और स्थान भेजें — मालिक खुद संपर्क करेंगे।">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --soil:#211A14;
+  --soil-60:rgba(33,26,20,.62);
+  --soil-40:rgba(33,26,20,.42);
+  --husk:#EDE6D8;
+  --husk-deep:#E0D7C4;
+  --card:#F8F3E9;
+  --gram:#B07A1E;
+  --gram-2:#D89B2E;
+  --gold:#F2C56B;
+  --soy:#4B6B39;
+  --clay:#8A4A2B;
+  --wa:#25D366;
+  --line:rgba(33,26,20,.14);
+  --hi:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;
+  --display:"Tiro Devanagari Hindi","Mukta",Georgia,serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:linear-gradient(180deg,#25190F 0%,#3E2A18 60%,#5E4229 100%) fixed,var(--soil);color:var(--soil);
+  font-family:var(--hi);font-size:16px;line-height:1.55;min-height:100vh;min-height:100dvh;
+  display:flex;flex-direction:column;align-items:center;padding:0 14px calc(24px + env(safe-area-inset-bottom))}
+a{color:inherit}
+svg{display:block}
+:focus-visible{outline:3px solid var(--gram-2);outline-offset:2px}
+
+.bar{width:100%;max-width:560px;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  color:var(--husk);padding:14px 4px;font-size:13.5px}
+.bar .back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:600;opacity:.9}
+.bar .back:hover{opacity:1}
+.bar a.ph{font-family:var(--display);font-size:17px;color:var(--gold);text-decoration:none;white-space:nowrap}
+
+.card{width:100%;max-width:560px;background:var(--card);border:1px solid var(--line);border-radius:14px;
+  box-shadow:0 24px 60px -24px rgba(0,0,0,.6);padding:22px 20px 24px;margin-top:2px}
+h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(26px,6vw,32px);line-height:1.25}
+.sub{margin:6px 0 0;font-size:14.5px;color:var(--soil-60)}
+
+form{margin-top:18px}
+.field{margin-bottom:14px}
+label{display:block;font-size:14px;font-weight:600;color:var(--clay);margin-bottom:5px}
+input[type=text],input[type=email]{width:100%;padding:13px 14px;font:inherit;font-size:16px;color:var(--soil);
+  background:#fff;border:1.5px solid var(--husk-deep);border-radius:10px;transition:border-color .15s ease}
+input:focus{border-color:var(--gram)}
+input::placeholder{color:var(--soil-40)}
+.honey{position:absolute;left:-6000px;top:auto;width:1px;height:1px;overflow:hidden}
+
+.send{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:6px;padding:14px 16px;
+  border:0;border-radius:12px;background:linear-gradient(135deg,#E6AC3C 0%,#B07A1E 100%);color:var(--soil);
+  font-family:var(--display);font-size:22px;line-height:1.2;cursor:pointer;
+  box-shadow:0 12px 26px -12px rgba(176,122,30,.95);transition:transform .15s ease}
+.send:hover{transform:translateY(-1px)}
+.send:active{transform:none}
+.send[disabled]{opacity:.6;cursor:wait;transform:none}
+.fine{margin:12px 0 0;font-size:12px;line-height:1.5;color:var(--soil-40)}
+
+.alt{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.alt p{margin:0 0 8px;font-size:13.5px;color:var(--soil-60)}
+.row{display:flex;gap:8px}
+.row a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 8px;border-radius:10px;
+  text-decoration:none;font-weight:600;font-size:15px;transition:filter .15s ease}
+.row a:hover{filter:brightness(1.12)}
+.row a svg{width:20px;height:20px;flex:none}
+.row .call{background:var(--soil);color:var(--husk)}
+.row .wa{background:var(--wa);color:#fff}
+
+.done{display:none;text-align:center;padding:14px 4px 6px}
+.done .tick{width:64px;height:64px;margin:0 auto 12px;border-radius:50%;background:var(--soy);display:grid;place-items:center}
+.done .tick svg{width:34px;height:34px;color:#fff}
+.done h2{margin:0;font-family:var(--display);font-weight:400;font-size:26px}
+.done p{margin:8px 0 0;font-size:15px;color:var(--soil-60)}
+body.sent form,body.sent .sub{display:none}
+body.sent .done{display:block}
+
+@media (min-width:600px){
+  .card{padding:30px 34px 32px}
+  .bar{padding:20px 8px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <a class="back" href="../">&larr; ज़मीन की जानकारी</a>
+  <a class="ph" href="tel:+919713193706">97131 93706</a>
+</div>
+
+<div class="card">
+  <h1>पूछताछ फ़ॉर्म</h1>
+  <p class="sub">नीचे अपनी जानकारी भेजें — मालिक खुद आपसे संपर्क करेंगे।</p>
+
+  <div class="done" id="done">
+    <div class="tick" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+    </div>
+    <h2>धन्यवाद!</h2>
+    <p>आपकी जानकारी मिल गई है। मालिक जल्द ही आपसे संपर्क करेंगे।</p>
+  </div>
+
+  <form action="https://formsubmit.co/PASTE_YOUR_EMAIL_HERE" method="POST" id="enq">
+    <input type="hidden" name="_subject" value="नलखेड़ा ज़मीन — नई पूछताछ">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://trivedichitransh12-sys.github.io/nalkhedaland/enquiry/?sent=1" id="next">
+    <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="field">
+      <label for="f-name">नाम <span lang="en">(Name)</span></label>
+      <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="आपका पूरा नाम">
+    </div>
+    <div class="field">
+      <label for="f-email">ईमेल <span lang="en">(Email)</span></label>
+      <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="aapka@email.com">
+    </div>
+    <div class="field">
+      <label for="f-from">आप कहाँ से हैं? <span lang="en">(Where are you from)</span></label>
+      <input type="text" id="f-from" name="from" required placeholder="गाँव / शहर, ज़िला">
+    </div>
+
+    <button class="send" type="submit" id="sendbtn">भेजें <span aria-hidden="true">&rarr;</span></button>
+    <p class="fine">आपकी जानकारी सिर्फ़ मालिक तक जाएगी, किसी और को नहीं दी जाएगी।</p>
+  </form>
+
+  <div class="alt">
+    <p>या सीधे बात करें:</p>
+    <div class="row">
+      <a class="call" href="tel:+919713193706">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        कॉल करें
+      </a>
+      <a class="wa" href="https://wa.me/919713193706?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.3 21.7l4.9-1.3A9.8 9.8 0 1 0 12 2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path fill="currentColor" d="M9.2 7.6c.2-.4.5-.5.8-.5h.4c.2 0 .4.1.5.4l.8 1.9c.1.2 0 .5-.1.6l-.6.7c-.1.2-.1.3 0 .5.7 1.2 1.6 2.1 2.9 2.8.2.1.4.1.5 0l.7-.7c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.3.4.5v.5c0 .4-.2.7-.5.9-.6.4-1.3.6-2 .5-3-.5-5.6-3.1-6.3-6.1-.1-.6.1-1.3.4-1.8z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* Redirect back here after FormSubmit accepts the entry, on whatever host this page runs */
+  var next=document.getElementById('next');
+  if(next && location.protocol.indexOf('http')===0){
+    next.value=location.origin+location.pathname+'?sent=1';
+  }
+  /* Success state after redirect */
+  if(/[?&]sent=1/.test(location.search)){
+    document.body.classList.add('sent');
+    if(typeof gtag==='function') gtag('event','enquiry_submitted');
+  }
+  /* Prevent double-submits */
+  var form=document.getElementById('enq'),btn=document.getElementById('sendbtn');
+  if(form&&btn){form.addEventListener('submit',function(){btn.disabled=true;});}
+})();
+</script>
+
+</body>
+</html>
