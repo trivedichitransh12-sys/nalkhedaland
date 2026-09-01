@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#25190F">
+<meta name="theme-color" content="#1C140D">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1015216036"></script>
@@ -23,29 +23,29 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --soil:#211A14;
-  --soil-60:rgba(33,26,20,.62);
-  --soil-40:rgba(33,26,20,.42);
-  --husk:#EDE6D8;
-  --husk-deep:#E0D7C4;
-  --card:#F8F3E9;
+  --soil:#1C140D;
+  --soil-60:rgba(28,20,13,.6);
+  --soil-40:rgba(28,20,13,.4);
+  --husk:#F2EDE2;
+  --husk-deep:#E6DECC;
+  --card:#FDFBF6;
   --gram:#B07A1E;
   --gram-2:#D89B2E;
   --gold:#F2C56B;
   --soy:#4B6B39;
   --clay:#8A4A2B;
   --wa:#25D366;
-  --line:rgba(33,26,20,.14);
-  --hi:"Mukta","Noto Sans Devanagari",system-ui,sans-serif;
-  --display:"Tiro Devanagari Hindi","Mukta",Georgia,serif;
+  --line:rgba(28,20,13,.1);
+  --hi:"Hind","Noto Sans Devanagari",system-ui,sans-serif;
+  --display:"Poppins","Hind",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--soil);color:var(--soil);font-family:var(--hi);font-size:15.5px;line-height:1.5}
+body{margin:0;background:var(--soil);color:var(--soil);font-family:var(--hi);font-size:15px;line-height:1.55}
 a{color:inherit}
 svg{display:block}
 :focus-visible{outline:3px solid var(--gram-2);outline-offset:3px}
@@ -53,93 +53,94 @@ svg{display:block}
 .page{background:var(--husk);min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;overflow:hidden;color:var(--husk);
-  background:linear-gradient(180deg,#25190F 0%,#3E2A18 55%,#5E4229 100%);
-  padding:12px 18px 26px}
+.hero{position:relative;overflow:hidden;color:#F7F1E4;
+  background:linear-gradient(180deg,#1C140D 0%,#372614 60%,#54391F 100%);
+  padding:14px 20px 30px}
 .hero:before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(60% 60% at 88% 95%,rgba(216,155,46,.55),rgba(216,155,46,0) 70%)}
+  background:radial-gradient(58% 58% at 88% 96%,rgba(216,155,46,.5),rgba(216,155,46,0) 70%)}
+.strip{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 18px;font-size:12.5px}
+.strip span{opacity:.7;white-space:nowrap;font-weight:500}
+.strip a{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.02em;text-decoration:none;color:var(--gold);white-space:nowrap}
 .hero-inner{position:relative;z-index:1}
-.strip{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 12px;font-size:12.5px}
-.strip span{opacity:.75;white-space:nowrap}
-.strip a{font-family:var(--display);font-size:17px;text-decoration:none;white-space:nowrap;color:var(--gold)}
-.kicker{margin:0 0 5px;font-size:12.5px;font-weight:600;color:var(--gram-2)}
-h1{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(23px,6.2vw,28px);line-height:1.3;text-wrap:balance}
+.badge{display:inline-block;background:var(--gram-2);color:var(--soil);font-family:var(--display);font-weight:600;font-size:12px;line-height:1;padding:7px 12px 6px;border-radius:999px;margin:0 0 12px}
+h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(21px,5.7vw,26px);line-height:1.45;letter-spacing:-.01em}
 h1 em{font-style:normal;color:var(--gold)}
-.sub{margin:7px 0 0;font-size:12px;line-height:1.4;opacity:.7}
-.temple{position:absolute;right:-8px;bottom:-2px;height:150px;width:auto;z-index:0;color:#140E09;opacity:.92}
+.loc{margin:7px 0 0;font-size:13px;opacity:.72;font-weight:500}
+.temple{position:absolute;right:-8px;bottom:-2px;height:148px;width:auto;z-index:0;color:#100A06;opacity:.9}
 
 /* ---------- Facts / chips ---------- */
-.body{flex:1;display:flex;flex-direction:column;gap:11px;padding:0 14px}
-.facts{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;margin:-16px 0 0;padding:3px 16px 4px;position:relative;z-index:2;
-  background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 32px -18px rgba(33,26,20,.5)}
-.facts div{padding:7px 0 6px;border-bottom:1px solid var(--line)}
+.body{flex:1;display:flex;flex-direction:column;gap:12px;padding:0 14px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:0 18px;margin:-16px 0 0;padding:5px 18px 6px;position:relative;z-index:2;
+  background:var(--card);border-radius:16px;box-shadow:0 16px 36px -20px rgba(28,20,13,.45)}
+.facts div{padding:8px 0 7px;border-bottom:1px solid var(--line)}
 .facts div:nth-last-child(-n+2){border-bottom:0}
-.facts dt{font-size:11.5px;font-weight:600;color:var(--clay);line-height:1.3}
-.facts dd{margin:1px 0 0;font-size:15px;font-weight:600;line-height:1.35}
+.facts dt{font-size:11.5px;font-weight:500;color:var(--soil-40);line-height:1.3}
+.facts dd{margin:1px 0 0;font-family:var(--display);font-size:14px;font-weight:600;line-height:1.45}
 .chips{list-style:none;padding:0 3px;margin:0;display:flex;flex-wrap:wrap;gap:6px}
-.chips li{font-size:13px;font-weight:500;line-height:1.3;padding:5px 10px;border-radius:999px;background:var(--husk-deep);border:1px solid transparent}
-.chips li.warn{background:#FBEFD4;border-color:var(--gram);color:#6B4A0F}
+.chips li{font-size:12.5px;font-weight:500;line-height:1.3;padding:6px 11px;border-radius:999px;background:#fff;box-shadow:0 1px 2px rgba(28,20,13,.06)}
+.chips li.warn{background:#F8E9C8;color:#6B4A0F}
 
-/* ---------- Actions (sticky at the bottom of the fold on phones) ---------- */
+/* ---------- Actions ---------- */
 .cta{margin-top:auto;position:sticky;bottom:0;z-index:3;background:var(--husk);
-  padding:9px 3px calc(11px + env(safe-area-inset-bottom));box-shadow:0 -16px 18px -16px rgba(33,26,20,.4)}
-.btn-form{display:flex;align-items:center;gap:12px;width:100%;padding:11px 14px 11px 14px;border:0;border-radius:12px;
-  background:linear-gradient(135deg,#E6AC3C 0%,#B07A1E 100%);color:var(--soil);text-decoration:none;text-align:left;cursor:pointer;
-  box-shadow:0 12px 26px -12px rgba(176,122,30,.95);transition:transform .15s ease}
+  padding:10px 3px calc(12px + env(safe-area-inset-bottom));box-shadow:0 -16px 18px -16px rgba(28,20,13,.35)}
+.btn-form{display:flex;align-items:center;gap:12px;width:100%;padding:12px 16px;border:0;border-radius:14px;
+  background:linear-gradient(135deg,#E2A536 0%,#B07A1E 100%);color:var(--soil);text-decoration:none;text-align:left;cursor:pointer;
+  box-shadow:0 12px 26px -12px rgba(176,122,30,.9);transition:transform .15s ease}
 .btn-form:hover{transform:translateY(-1px)}
 .btn-form:active{transform:none}
-.btn-form .ico{flex:none;width:44px;height:44px;border-radius:50%;background:rgba(33,26,20,.14);display:grid;place-items:center}
-.btn-form .ico svg{width:24px;height:24px}
-.btn-form b{display:block;font-family:var(--display);font-weight:400;font-size:21px;line-height:1.2}
-.btn-form small{display:block;font-size:12.5px;font-weight:500;line-height:1.35;opacity:.85;margin-top:1px}
-.btn-form .arrow{margin-left:auto;font-size:24px;opacity:.65;flex:none}
+.btn-form .ico{flex:none;width:42px;height:42px;border-radius:12px;background:rgba(28,20,13,.13);display:grid;place-items:center}
+.btn-form .ico svg{width:22px;height:22px}
+.btn-form b{display:block;font-family:var(--display);font-weight:600;font-size:17.5px;line-height:1.4}
+.btn-form small{display:block;font-size:12.5px;font-weight:500;line-height:1.4;opacity:.8}
+.btn-form .arrow{margin-left:auto;font-size:22px;opacity:.6;flex:none}
 .row{display:flex;gap:8px;margin-top:8px}
-.row a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:10px 8px;border-radius:12px;text-decoration:none;font-weight:600;font-size:15.5px;line-height:1.2;transition:filter .15s ease}
+.row a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 8px;border-radius:14px;text-decoration:none;
+  font-family:var(--display);font-weight:600;font-size:14.5px;line-height:1.3;transition:filter .15s ease}
 .row a:hover{filter:brightness(1.12)}
-.row a svg{width:21px;height:21px;flex:none}
+.row a svg{width:20px;height:20px;flex:none}
 .row .call{background:var(--soil);color:var(--husk)}
 .row .wa{background:var(--wa);color:#fff}
-.fine{margin:8px 0 0;font-size:11px;line-height:1.45;color:var(--soil-40)}
+.fine{margin:8px 2px 0;font-size:10.5px;line-height:1.5;color:var(--soil-40)}
 
-/* ---------- Tablet: wider column, 3-column facts, no sticky ---------- */
+/* ---------- Tablet ---------- */
 @media (min-width:600px){
-  .hero{padding:20px 32px 44px}
-  .hero-inner{max-width:900px;margin:0 auto;padding-right:220px}
-  .strip{max-width:900px;margin:0 auto 22px;font-size:14px}
-  .strip a{font-size:20px}
-  .kicker{font-size:14px}
-  h1{font-size:clamp(30px,4.8vw,40px)}
-  .sub{font-size:14px;margin-top:10px}
-  .temple{height:240px;right:24px;opacity:.95}
-  .body{width:100%;max-width:900px;margin:0 auto;padding:0 32px 30px;gap:18px}
-  .facts{grid-template-columns:repeat(3,1fr);gap:0 24px;padding:6px 24px 8px;margin-top:-26px}
-  .facts div{padding:10px 0 9px}
+  .hero{padding:22px 32px 48px}
+  .strip{max-width:900px;margin:0 auto 26px;font-size:14px}
+  .strip a{font-size:18px}
+  .hero-inner{max-width:900px;margin:0 auto;padding-right:230px}
+  .badge{font-size:13px}
+  h1{font-size:clamp(28px,4.4vw,36px)}
+  .loc{font-size:15px}
+  .temple{height:235px;right:26px}
+  .body{width:100%;max-width:900px;margin:0 auto;padding:0 32px 32px;gap:18px}
+  .facts{grid-template-columns:repeat(3,1fr);gap:0 26px;padding:8px 26px 9px;margin-top:-28px}
+  .facts div{padding:11px 0 10px}
   .facts div:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
   .facts div:nth-last-child(-n+3){border-bottom:0}
   .facts dt{font-size:12.5px}
-  .facts dd{font-size:17px}
-  .chips li{font-size:14px;padding:7px 13px}
-  .cta{position:static;box-shadow:none;padding:6px 0 0}
-  .btn-form{padding:14px 18px}
-  .btn-form b{font-size:25px}
-  .btn-form small{font-size:14px}
+  .facts dd{font-size:16px}
+  .chips li{font-size:14px;padding:8px 14px}
+  .cta{position:static;box-shadow:none;padding:8px 0 0}
+  .btn-form{padding:16px 20px}
+  .btn-form b{font-size:20px}
+  .btn-form small{font-size:13.5px}
   .row{gap:12px;margin-top:12px}
-  .row a{padding:13px;font-size:17px}
-  .fine{font-size:12.5px;margin-top:14px}
+  .row a{padding:14px;font-size:16px}
+  .fine{font-size:12px;margin-top:14px}
 }
 
-/* ---------- Desktop: hero panel left, facts + actions right ---------- */
+/* ---------- Desktop ---------- */
 @media (min-width:960px){
   .page{flex-direction:row}
-  .hero{flex:0 0 46%;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-start;padding:118px 56px 0}
-  .hero:before{background:radial-gradient(55% 45% at 80% 100%,rgba(216,155,46,.6),rgba(216,155,46,0) 70%)}
-  .hero-inner{max-width:560px;margin:0;padding:0 0 min(42vh,400px)}
-  .strip{position:absolute;top:26px;left:56px;right:56px;margin:0;max-width:none}
-  h1{font-size:clamp(36px,3.4vw,50px)}
-  .sub{font-size:15px}
+  .hero{flex:0 0 46%;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-start;padding:120px 56px 0}
+  .hero:before{background:radial-gradient(55% 45% at 80% 100%,rgba(216,155,46,.55),rgba(216,155,46,0) 70%)}
+  .strip{position:absolute;top:28px;left:56px;right:56px;margin:0;max-width:none}
+  .hero-inner{max-width:540px;margin:0;padding:0 0 min(42vh,400px)}
+  h1{font-size:clamp(30px,2.6vw,40px)}
+  .loc{font-size:15px}
   .temple{height:min(44vh,420px);right:32px;bottom:-4px}
-  .body{flex:1;justify-content:center;align-items:flex-start;max-width:none;margin:0;padding:56px 64px;gap:24px}
-  .body>*{width:100%;max-width:760px}
+  .body{flex:1;justify-content:center;align-items:flex-start;max-width:none;margin:0;padding:56px 64px;gap:22px}
+  .body>*{width:100%;max-width:740px}
   .facts{margin-top:0}
   .cta{padding-top:8px}
 }
@@ -152,15 +153,14 @@ h1 em{font-style:normal;color:var(--gold)}
 
   <header class="hero">
     <div class="strip">
-        <span>मालिक से सीधे &middot; कोई दलाल नहीं</span>
-        <a href="tel:+919713193706">97131 93706</a>
+      <span>मालिक से सीधे &middot; बिना दलाल</span>
+      <a href="tel:+919713193706">97131 93706</a>
     </div>
     <div class="hero-inner">
-      <p class="kicker">ज़मीन बिकाऊ है &middot; नलखेड़ा, आगर मालवा, मध्य प्रदेश</p>
-      <h1>4.47 एकड़ खेती की ज़मीन, <em>माँ बगलामुखी मंदिर से सिर्फ़ 2.4 किमी</em></h1>
-      <p class="sub" lang="en">4.47 acres (1.808 ha) agricultural land for sale &middot; 2.4 km from Maa Baglamukhi temple, Nalkheda</p>
+      <span class="badge">ज़मीन बिकाऊ है</span>
+      <h1>4.47 एकड़ खेती की ज़मीन<br><em>माँ बगलामुखी मंदिर से 2.4 किमी</em></h1>
+      <p class="loc">नलखेड़ा &middot; आगर मालवा &middot; मध्य प्रदेश</p>
     </div>
-    <!-- Temple silhouette, from the original illustration -->
     <svg class="temple" viewBox="290 14 220 222" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
       <g fill="currentColor">
         <rect x="396" y="28" width="8" height="16" rx="2"/>
@@ -180,22 +180,21 @@ h1 em{font-style:normal;color:var(--gold)}
   <main class="body">
 
     <dl class="facts">
-      <div><dt>रकबा</dt><dd>4.47 एकड़ &middot; 1.808 हेक्टेयर</dd></div>
-      <div><dt>ज़मीन</dt><dd>कृषि भूमि, असिंचित</dd></div>
-      <div><dt>मिट्टी</dt><dd>मालवा की काली मिट्टी</dd></div>
-      <div><dt>रास्ता</dt><dd>सड़क ज़मीन की सीमा तक</dd></div>
-      <div><dt>मालिकाना हक़</dt><dd>साफ़, मालिक के नाम</dd></div>
-      <div><dt>कागज़ात</dt><dd>तैयार &middot; WhatsApp पर मिलेंगे</dd></div>
+      <div><dt>रकबा</dt><dd>4.47 एकड़ (1.808 हे.)</dd></div>
+      <div><dt>प्रकार</dt><dd>कृषि, असिंचित</dd></div>
+      <div><dt>मिट्टी</dt><dd>काली मिट्टी</dd></div>
+      <div><dt>रास्ता</dt><dd>सीमा तक सड़क</dd></div>
+      <div><dt>टाइटल</dt><dd>साफ़, मालिक के नाम</dd></div>
+      <div><dt>कागज़ात</dt><dd>WhatsApp पर तैयार</dd></div>
     </dl>
 
     <ul class="chips">
       <li>कोई कमीशन नहीं</li>
       <li>रजिस्ट्री जल्दी</li>
       <li>सोयाबीन–चना क्षेत्र</li>
-      <li>सीमा का नक्शा</li>
-      <li>मृदा स्वास्थ्य कार्ड</li>
-      <li>डायवर्सन नहीं — कृषि भूमि</li>
-      <li class="warn">अभी सिंचाई का साधन नहीं</li>
+      <li>नक्शा व मृदा कार्ड</li>
+      <li>डायवर्सन नहीं</li>
+      <li class="warn">सिंचाई अभी नहीं</li>
     </ul>
 
     <div class="cta">
@@ -203,7 +202,7 @@ h1 em{font-style:normal;color:var(--gold)}
         <span class="ico" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9.5 13h5M9.5 17h5"/></svg>
         </span>
-        <span><b>पूछताछ करें</b><small>अपना नाम और नंबर भेजें — मालिक खुद फ़ोन करेंगे</small></span>
+        <span><b>पूछताछ करें</b><small>मालिक खुद फ़ोन करेंगे</small></span>
         <span class="arrow" aria-hidden="true">&rarr;</span>
       </a>
       <div class="row">
@@ -211,12 +210,12 @@ h1 em{font-style:normal;color:var(--gold)}
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           कॉल करें
         </a>
-        <a class="wa" href="https://wa.me/919713193706?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%88%E0%A4%82%E0%A4%A8%E0%A5%87%20%E0%A4%A8%E0%A4%B2%E0%A4%96%E0%A5%87%E0%A4%A1%E0%A4%BC%E0%A4%BE%20%E0%A4%95%E0%A5%80%20%E0%A4%9C%E0%A4%BC%E0%A4%AE%E0%A5%80%E0%A4%A8%20%E0%A4%95%E0%A4%BE%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%AA%E0%A4%A8%20%E0%A4%A6%E0%A5%87%E0%A4%96%E0%A4%BE%20%E0%A4%B9%E0%A5%88" rel="noopener">
+        <a class="wa" href="https://wa.me/919713193706?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87" rel="noopener">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.3 21.7l4.9-1.3A9.8 9.8 0 1 0 12 2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path fill="currentColor" d="M9.2 7.6c.2-.4.5-.5.8-.5h.4c.2 0 .4.1.5.4l.8 1.9c.1.2 0 .5-.1.6l-.6.7c-.1.2-.1.3 0 .5.7 1.2 1.6 2.1 2.9 2.8.2.1.4.1.5 0l.7-.7c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.3.4.5v.5c0 .4-.2.7-.5.9-.6.4-1.3.6-2 .5-3-.5-5.6-3.1-6.3-6.1-.1-.6.1-1.3.4-1.8z"/></svg>
           WhatsApp
         </a>
       </div>
-      <p class="fine">जानकारी राजस्व अभिलेख के अनुसार है। खरीदने से पहले तहसील कार्यालय में रिकॉर्ड की जाँच ज़रूर करें।</p>
+      <p class="fine">जानकारी राजस्व अभिलेख अनुसार — रजिस्ट्री से पहले तहसील में जाँच लें।</p>
     </div>
 
   </main>
